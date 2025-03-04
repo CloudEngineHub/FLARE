@@ -15,6 +15,7 @@ Official implementation of **FLARE** (CVPR 2025) - a feed-forward model for join
 - [🌍 Installation](#-installation)
 - [💿 Checkpoints](#-checkpoints)
 - [🎯 Run a Demo (Point Cloud and Camera Pose Estimation) ](#-run-a-demo-point-cloud-and-camera-pose-estimation)
+- [📽️ Evaluating Novel View Synthesis](#-evaluating-novel-view-synthesis)
 - [👀 Visualization ](#-visualization)
 - [📜 Citation ](#-citation)
 
@@ -32,8 +33,8 @@ Achieves SOTA performance with inference times <0.5 seconds!
 ## 🛠️ TODO List
 - [x] Release point cloud and camera pose estimation code.
 - [x] Updated Gradio demo (app.py).
-- [ ] Release novel view synthesis code. (~2 weeks)
-- [ ] Release evaluation code. (~2 weeks)
+- [x] Release novel view synthesis code.
+- [x] Release evaluation code.
 - [ ] Release training code.
 - [ ] Release data processing code.
 
@@ -50,7 +51,7 @@ conda install -c conda-forge ffmpeg
 
 
 ## 💿 Checkpoints
-Download the checkpoint from [huggingface](https://huggingface.co/AntResearch/FLARE/blob/main/geometry_pose.pth) and place it in the /checkpoints/geometry_pose.pth directory.
+Download the checkpoint from [huggingface](https://huggingface.co/AntResearch/FLARE/blob/main/geometry_pose.pth) and place it in the checkpoints/geometry_pose.pth and checkpoints/NVS.pth directory.
 
 ## 🎯 Run a Demo (Point Cloud and Camera Pose Estimation) 
 
@@ -75,6 +76,9 @@ Enable the wpose=True flag in both the CustomDataset and AsymmetricMASt3R. An ex
 sh scripts/run_pose_pointcloud_wpose.sh
 ```
 
+
+
+
 ## 👀 Visualization 
 
 ```
@@ -85,6 +89,15 @@ sh ./visualizer/vis.sh
 ```
 CUDA_VISIBLE_DEVICES=0 python visualizer/run_vis.py --result_npz data/mesh/IMG_1511.HEIC.JPG.JPG/pred.npz --results_folder data/mesh/IMG_1511.HEIC.JPG.JPG/
 ``` 
+
+## 📽️ Evaluating Novel View Synthesis
+
+You can evaluate the novel view synthesis on RealEstate10K dataset using the following command:
+
+```
+sh scripts/run_eval_nvs.sh
+```
+
 
 
 ## 📜 Citation 
