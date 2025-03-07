@@ -119,9 +119,13 @@ Our model uses the same training and test datasets as pixelSplat. Below we quote
       url={https://arxiv.org/abs/2502.12138}, 
 }
 ```
+## 🙏 Acknowledgement
+FLARE is constructed on the outstanding open-source projects. We are extremely grateful for the contributions of these projects and their communities, whose hard work has greatly propelled the development of the field and enabled our work to be realized.
 
-## Star History
+- [DUSt3R](https://dust3r.europe.naverlabs.com/)
+- [VGGSfM](https://github.com/facebookresearch/vggsfm)
+- [MASt3R](https://github.com/naver/mast3r)
+- [gsplat](https://github.com/nerfstudio-project/gsplat)
 
-Give it a star 🌟 if you find this project useful.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ant-research/FLARE&type=Date)](https://star-history.com/#ant-research/FLARE&Date)
+
